@@ -3,54 +3,50 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 <title>Ashli Varghese | Data Sensemaker</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
 <style>
-
 :root{
---bg:#f4efe7;
---paper:#fffdf9;
---ink:#1e1c1a;
---muted:#66615b;
---line:#dfd4c8;
---accent:#8e3b46;
---accent2:#d9a441;
---radius:22px;
---shadow:0 10px 30px rgba(35,24,14,0.08);
+  --bg:#f4efe7;
+  --paper:#fffdf9;
+  --ink:#1e1c1a;
+  --muted:#66615b;
+  --line:#dfd4c8;
+  --accent:#8e3b46;
+  --accent2:#d9a441;
+  --radius:22px;
+  --shadow:0 10px 30px rgba(35,24,14,0.08);
 }
 
 *{
-box-sizing:border-box;
+  box-sizing:border-box;
 }
 
 body{
-margin:0;
-background:
-radial-gradient(circle at top left, rgba(217,164,65,0.07), transparent 26%),
-radial-gradient(circle at top right, rgba(142,59,70,0.07), transparent 24%),
-var(--bg);
-
-font-family:'Inter', sans-serif;
-color:var(--ink);
-line-height:1.7;
+  margin:0;
+  background:
+    radial-gradient(circle at top left, rgba(217,164,65,0.07), transparent 26%),
+    radial-gradient(circle at top right, rgba(142,59,70,0.07), transparent 24%),
+    var(--bg);
+  font-family:'Inter', sans-serif;
+  color:var(--ink);
+  line-height:1.7;
 }
 
 .container{
-width:min(1100px, calc(100% - 32px));
-margin:30px auto 60px;
+  width:min(1100px, calc(100% - 32px));
+  margin:30px auto 60px;
 }
 
 .hero{
-display:grid;
-grid-template-columns:1.2fr 0.8fr;
-gap:22px;
-margin-bottom:24px;
+  display:grid;
+  grid-template-columns:1.2fr 0.8fr;
+  gap:22px;
+  margin-bottom:24px;
 }
 
 .hero-main,
@@ -58,702 +54,561 @@ margin-bottom:24px;
 .section-block,
 .card,
 .footer{
-background:rgba(255,253,249,0.9);
-border:1px solid var(--line);
-border-radius:var(--radius);
-box-shadow:var(--shadow);
+  background:rgba(255,253,249,0.9);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
 }
 
 .hero-main{
-padding:36px;
-position:relative;
+  padding:36px;
+  position:relative;
+  min-height:360px;
 }
 
 .eyebrow{
-display:inline-flex;
-align-items:center;
-gap:8px;
-padding:7px 13px;
-background:#f4e8e8;
-border-radius:999px;
-font-size:12px;
-font-weight:700;
-letter-spacing:0.08em;
-text-transform:uppercase;
-color:var(--accent);
-margin-bottom:18px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 13px;
+  background:#f4e8e8;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:18px;
 }
 
 .dot{
-width:8px;
-height:8px;
-background:var(--accent);
-border-radius:50%;
+  width:8px;
+  height:8px;
+  background:var(--accent);
+  border-radius:50%;
 }
 
 h1{
-margin:0;
-font-size:clamp(44px,6vw,72px);
-line-height:0.95;
-letter-spacing:-0.04em;
+  margin:0;
+  font-size:clamp(44px,6vw,72px);
+  line-height:0.95;
+  letter-spacing:-0.04em;
+  max-width:620px;
 }
 
 .serif{
-font-family:'Instrument Serif', serif;
-font-style:italic;
-font-weight:400;
+  font-family:'Instrument Serif', serif;
+  font-style:italic;
+  font-weight:400;
 }
 
 .hero-copy{
-margin-top:18px;
-font-size:17px;
-color:#2f2a26;
-max-width:520px;
+  margin-top:18px;
+  font-size:17px;
+  color:#2f2a26;
+  max-width:520px;
+}
+
+.hero-photo{
+  position:absolute;
+  right:36px;
+  bottom:30px;
+  width:180px;
+  height:180px;
+  object-fit:cover;
+  object-position:center 35%;
+  border-radius:18px;
+  border:1px solid var(--line);
+  filter:grayscale(100%) contrast(105%);
+  box-shadow:0 8px 22px rgba(0,0,0,0.08);
 }
 
 .hero-side{
-padding:22px;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-}
-
-.profile-pic{
-width:100%;
-height:240px;
-object-fit:cover;
-object-position:center 35%;
-border-radius:14px;
-margin-bottom:16px;
-border:1px solid var(--line);
-filter:grayscale(100%) contrast(105%);
+  padding:22px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
 }
 
 .mini-label{
-font-size:12px;
-font-weight:700;
-letter-spacing:0.08em;
-text-transform:uppercase;
-color:var(--muted);
-margin-bottom:8px;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:8px;
 }
 
 .stats{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-margin-top:18px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin-top:18px;
 }
 
 .stat{
-background:white;
-border:1px solid var(--line);
-padding:14px;
-border-radius:16px;
+  background:white;
+  border:1px solid var(--line);
+  padding:14px;
+  border-radius:16px;
 }
 
 .stat-number{
-display:block;
-font-size:26px;
-font-weight:800;
-margin-bottom:4px;
+  display:block;
+  font-size:26px;
+  font-weight:800;
+  margin-bottom:4px;
 }
 
 .stat-label{
-font-size:13px;
-color:var(--muted);
+  font-size:13px;
+  color:var(--muted);
 }
 
 .section{
-margin-top:18px;
+  margin-top:18px;
 }
 
 .section-block{
-padding:24px 24px 10px;
+  padding:24px 24px 10px;
 }
 
 .section-head{
-display:flex;
-justify-content:space-between;
-align-items:end;
-margin-bottom:18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  margin-bottom:18px;
+  gap:20px;
 }
 
 h2{
-margin:0;
-font-size:34px;
-letter-spacing:-0.03em;
+  margin:0;
+  font-size:34px;
+  letter-spacing:-0.03em;
 }
 
 .section-note{
-font-size:14px;
-color:var(--muted);
-max-width:420px;
+  font-size:14px;
+  color:var(--muted);
+  max-width:420px;
 }
 
 .cards{
-display:grid;
-grid-template-columns:repeat(12,1fr);
-gap:16px;
-margin-bottom:14px;
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:16px;
+  margin-bottom:14px;
 }
 
 .card{
-padding:22px;
-background:linear-gradient(180deg, white, #fbf7f2);
-transition:0.18s;
+  padding:22px;
+  background:linear-gradient(180deg, white, #fbf7f2);
+  transition:0.18s;
 }
 
 .card:hover{
-transform:translateY(-3px);
-box-shadow:0 14px 30px rgba(35,24,14,0.1);
+  transform:translateY(-3px);
+  box-shadow:0 14px 30px rgba(35,24,14,0.1);
 }
 
 .large{
-grid-column:span 7;
+  grid-column:span 7;
 }
 
 .small{
-grid-column:span 5;
+  grid-column:span 5;
 }
 
 .full{
-grid-column:1/-1;
+  grid-column:1/-1;
 }
 
 .card h3{
-margin:0 0 10px;
-font-size:21px;
+  margin:0 0 10px;
+  font-size:21px;
 }
 
 .card p{
-margin:0 0 14px;
-font-size:15px;
-color:#332e2a;
+  margin:0 0 14px;
+  font-size:15px;
+  color:#332e2a;
 }
 
 .meta{
-display:flex;
-flex-wrap:wrap;
-gap:8px;
-margin-bottom:12px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:12px;
 }
 
 .pill{
-font-size:12px;
-font-weight:600;
-background:#f3ece4;
-border:1px solid #eadfd2;
-padding:6px 10px;
-border-radius:999px;
+  font-size:12px;
+  font-weight:600;
+  background:#f3ece4;
+  border:1px solid #eadfd2;
+  padding:6px 10px;
+  border-radius:999px;
 }
 
 .accent-line{
-width:60px;
-height:4px;
-background:linear-gradient(90deg,var(--accent),var(--accent2));
-border-radius:999px;
-margin:10px 0 14px;
+  width:60px;
+  height:4px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  border-radius:999px;
+  margin:10px 0 14px;
 }
 
 a{
-text-decoration:none;
-color:var(--accent);
-font-weight:700;
+  text-decoration:none;
+  color:var(--accent);
+  font-weight:700;
 }
 
 .skills{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-padding-bottom:12px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  padding-bottom:12px;
 }
 
 .skill{
-padding:9px 13px;
-background:white;
-border:1px solid var(--line);
-border-radius:999px;
-font-size:14px;
-font-weight:600;
+  padding:9px 13px;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:999px;
+  font-size:14px;
+  font-weight:600;
 }
 
 .contact{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:14px;
-margin-bottom:14px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-bottom:14px;
 }
 
 .contact-card{
-padding:18px;
-border-radius:18px;
-border:1px solid var(--line);
-background:white;
+  padding:18px;
+  border-radius:18px;
+  border:1px solid var(--line);
+  background:white;
 }
 
 .footer{
-margin-top:18px;
-padding:18px 22px;
-display:flex;
-justify-content:space-between;
-font-size:14px;
-color:var(--muted);
-flex-wrap:wrap;
+  margin-top:18px;
+  padding:18px 22px;
+  display:flex;
+  justify-content:space-between;
+  font-size:14px;
+  color:var(--muted);
+  flex-wrap:wrap;
 }
 
 @media(max-width:900px){
+  .hero{
+    grid-template-columns:1fr;
+  }
 
-.hero{
-grid-template-columns:1fr;
+  .hero-main{
+    min-height:auto;
+    padding-bottom:240px;
+  }
+
+  .hero-photo{
+    right:22px;
+    bottom:22px;
+    width:150px;
+    height:150px;
+  }
+
+  .large,.small{
+    grid-column:1/-1;
+  }
+
+  .contact{
+    grid-template-columns:1fr;
+  }
 }
 
-.large,.small{
-grid-column:1/-1;
-}
+@media(max-width:640px){
+  .container{
+    width:min(100% - 20px, 1120px);
+  }
 
-.contact{
-grid-template-columns:1fr;
-}
+  .hero-main{
+    padding:24px 24px 220px;
+  }
 
-}
+  .hero-photo{
+    width:140px;
+    height:140px;
+    right:20px;
+    bottom:20px;
+  }
 
+  h1{
+    max-width:100%;
+  }
+
+  .section-head{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
 </style>
-
 </head>
 
 <body>
-
 <div class="container">
 
-<section class="hero">
-
-<div class="hero-main">
-
-<div class="eyebrow">
-<span class="dot"></span> Portfolio
-</div>
-
-<h1>
-Ashli Varghese,<br>
-<span class="serif">Data Sensemaker</span>
-</h1>
-
-<p class="hero-copy">
-From political philosophy to machine learning — still asking the same questions, just with better tools.
-</p>
-
-</div>
-
-<aside class="hero-side">
-
-<img src="profile.jpeg" class="profile-pic">
-
-<div>
-
-<div class="mini-label">
-Currently curious about
-</div>
-
-<p>
-Data science, journalism, public-interest questions, and how evidence can clarify complex debates.
-</p>
-
-</div>
-
-<div class="stats">
-
-<div class="stat">
-<span class="stat-number">100+</span>
-<span class="stat-label">data-driven stories authored</span>
-</div>
-
-<div class="stat">
-<span class="stat-number">300+</span>
-<span class="stat-label">UK local authorities analysed</span>
-</div>
-
-<div class="stat">
-<span class="stat-number">1,000+</span>
-<span class="stat-label">news articles studied in RAG project</span>
-</div>
-
-<div class="stat">
-<span class="stat-number">UK</span>
-<span class="stat-label">public datasets, maps, live apps</span>
-</div>
-
-</div>
-
-</aside>
-
-</section>
-
-
-<section class="section">
-
-<div class="section-block">
-
-<div class="section-head">
-
-<h2>About</h2>
-
-<p class="section-note">
-A slightly more human summary than a CV bullet list.
-</p>
-
-</div>
-
-<div class="cards">
-
-<div class="card full">
-
-<div class="accent-line"></div>
-
-<p>
-
-A data journalist by chance, a data scientist by choice. My route into machine learning has been somewhat unconventional, but in hindsight, everything aligns. I began by studying political philosophy, where my dissertation explored questions around digital realities and the metaverse. That curiosity later took a more empirical form through data journalism, working with political and economic datasets, and eventually led me to formal training in data science.
-
-Across different fields, the common thread has remained the same: I enjoy making sense of complex data and uncovering patterns that are not immediately obvious.
-
-Outside datasets, I spend time watching films, occasionally overanalysing thriller series, and currently attempting to convince my ukulele that I know what I’m doing.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<section class="section">
-
-<div class="section-block">
-
-<div class="section-head">
-
-<h2>Selected Work</h2>
-
-<p class="section-note">
-A few things I’ve tried to understand with data.
-</p>
-
-</div>
-
-
-<div class="cards">
-
-<article class="card large">
-
-<h3>
-Political Bias Detection in News Media
-</h3>
-
-<div class="meta">
-
-<span class="pill">Python</span>
-<span class="pill">NLP</span>
-<span class="pill">Transformers</span>
-<span class="pill">FAISS</span>
-
-</div>
-
-<p>
-
-Built a Retrieval-Augmented Generation pipeline analysing 1,000+ political news articles to explore how ideological perspectives influence narrative framing.
-
-</p>
-
-<a href="https://github.com/thequiickbrownfox/Political_Bias_Detection_RAG">
-
-View project →
-
-</a>
-
-</article>
-
-
-
-<article class="card small">
-
-<h3>
-Which UK Towns are Ageing the Most?
-</h3>
-
-<div class="meta">
-
-<span class="pill">Pandas</span>
-<span class="pill">GeoPandas</span>
-<span class="pill">ONS</span>
-<span class="pill">Streamlit</span>
-
-</div>
-
-<p>
-
-Using ONS time-series data, I analysed demographic change across 300+ local authorities to explore regional generational shifts.
-
-</p>
-
-<a href="https://uk-ageing-local-towns-explorer.streamlit.app/">
-
-View project →
-
-</a>
-
-</article>
-
-
-
-<article class="card full">
-
-<h3>
-UK Cinema Access Mapping
-</h3>
-
-<div class="meta">
-
-<span class="pill">QGIS</span>
-<span class="pill">Python</span>
-<span class="pill">Geospatial</span>
-<span class="pill">OpenStreetMap</span>
-
-</div>
-
-<p>
-
-Mapped cinema accessibility across the UK using OpenStreetMap data to explore distribution of cultural infrastructure.
-
-</p>
-
-<a href="https://uk-cinema-finder.streamlit.app/">
-
-View project →
-
-</a>
-
-</article>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-<section class="section">
-
-<div class="section-block">
-
-<div class="section-head">
-
-<h2>Writing</h2>
-
-<p class="section-note">
-Where analysis meets explanation.
-</p>
-
-</div>
-
-
-<div class="cards">
-
-<article class="card small">
-
-<h3>
-Business Standard Data Journalism
-</h3>
-
-<p>
-
-Cleaned, validated and structured political, economic and financial datasets to support accurate reporting. Authored 100+ research-driven data stories.
-
-</p>
-
-<a href="https://www.business-standard.com/author/ashli-varghese">
-
-View articles →
-
-</a>
-
-</article>
-
-
-
-<article class="card large">
-
-<h3>
-Shortcut Learning in CNNs
-</h3>
-
-<p>
-
-Explored how neural networks can achieve high accuracy while relying on superficial visual cues, using the Fashion MNIST dataset.
-
-</p>
-
-<a href="https://medium.com/@thequiickbrownfox/pretty-pictures-lazy-models-detecting-shortcut-learning-in-cnn-b10d9ad417b2">
-
-Read article →
-
-</a>
-
-</article>
-
+  <section class="hero">
+
+    <div class="hero-main">
+      <div class="eyebrow">
+        <span class="dot"></span> Portfolio
+      </div>
+
+      <h1>
+        Ashli Varghese,<br>
+        <span class="serif">Data Sensemaker</span>
+      </h1>
+
+      <p class="hero-copy">
+        From political philosophy to machine learning — still asking the same questions, just with better tools.
+      </p>
+
+      <img src="profile.jpeg" class="hero-photo" alt="Ashli Varghese">
+    </div>
+
+    <aside class="hero-side">
+      <div>
+        <div class="mini-label">Currently curious about</div>
+        <p>
+          Data science, journalism, public-interest questions, and how evidence can clarify complex debates.
+        </p>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-number">100+</span>
+          <span class="stat-label">data-driven stories authored</span>
+        </div>
+
+        <div class="stat">
+          <span class="stat-number">300+</span>
+          <span class="stat-label">UK local authorities analysed</span>
+        </div>
+
+        <div class="stat">
+          <span class="stat-number">1,000+</span>
+          <span class="stat-label">news articles studied in RAG project</span>
+        </div>
+
+        <div class="stat">
+          <span class="stat-number">UK</span>
+          <span class="stat-label">public datasets, maps, live apps</span>
+        </div>
+      </div>
+    </aside>
+
+  </section>
+
+  <section class="section">
+    <div class="section-block">
+      <div class="section-head">
+        <h2>About</h2>
+        <p class="section-note">
+          A slightly more human summary than a CV bullet list.
+        </p>
+      </div>
+
+      <div class="cards">
+        <div class="card full">
+          <div class="accent-line"></div>
+          <p>
+            A data journalist by chance, a data scientist by choice. My route into machine learning has been somewhat unconventional, but in hindsight, everything aligns. I began by studying political philosophy, where my dissertation explored questions around digital realities and the metaverse. That curiosity later took a more empirical form through data journalism, working with political and economic datasets, and eventually led me to formal training in data science.
+          </p>
+          <p>
+            Across different fields, the common thread has remained the same: I enjoy making sense of complex data and uncovering patterns that are not immediately obvious.
+          </p>
+          <p>
+            Outside datasets, I spend time watching films, occasionally overanalysing thriller series, and currently attempting to convince my ukulele that I know what I’m doing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-block">
+      <div class="section-head">
+        <h2>Selected Work</h2>
+        <p class="section-note">
+          A few things I’ve tried to understand with data.
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="card large">
+          <h3>Political Bias Detection in News Media</h3>
+
+          <div class="meta">
+            <span class="pill">Python</span>
+            <span class="pill">NLP</span>
+            <span class="pill">Transformers</span>
+            <span class="pill">FAISS</span>
+          </div>
+
+          <p>
+            Built a Retrieval-Augmented Generation pipeline analysing 1,000+ political news articles to explore how ideological perspectives influence narrative framing.
+          </p>
+
+          <a href="https://github.com/thequiickbrownfox/Political_Bias_Detection_RAG" target="_blank" rel="noopener noreferrer">
+            View project →
+          </a>
+        </article>
+
+        <article class="card small">
+          <h3>Which UK Towns are Ageing the Most?</h3>
+
+          <div class="meta">
+            <span class="pill">Pandas</span>
+            <span class="pill">GeoPandas</span>
+            <span class="pill">ONS</span>
+            <span class="pill">Streamlit</span>
+          </div>
+
+          <p>
+            Using ONS time-series data, I analysed demographic change across 300+ local authorities to explore regional generational shifts.
+          </p>
+
+          <a href="https://uk-ageing-local-towns-explorer.streamlit.app/" target="_blank" rel="noopener noreferrer">
+            View project →
+          </a>
+        </article>
+
+        <article class="card full">
+          <h3>UK Cinema Access Mapping</h3>
+
+          <div class="meta">
+            <span class="pill">QGIS</span>
+            <span class="pill">Python</span>
+            <span class="pill">Geospatial</span>
+            <span class="pill">OpenStreetMap</span>
+          </div>
+
+          <p>
+            Mapped cinema accessibility across the UK using OpenStreetMap data to explore distribution of cultural infrastructure.
+          </p>
+
+          <a href="https://uk-cinema-finder.streamlit.app/" target="_blank" rel="noopener noreferrer">
+            View project →
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-block">
+      <div class="section-head">
+        <h2>Writing</h2>
+        <p class="section-note">
+          Where analysis meets explanation.
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="card small">
+          <h3>Business Standard Data Journalism</h3>
+
+          <p>
+            Cleaned, validated and structured political, economic and financial datasets to support accurate reporting. Authored 100+ research-driven data stories.
+          </p>
+
+          <a href="https://www.business-standard.com/author/ashli-varghese" target="_blank" rel="noopener noreferrer">
+            View articles →
+          </a>
+        </article>
+
+        <article class="card large">
+          <h3>Shortcut Learning in CNNs</h3>
+
+          <p>
+            Explored how neural networks can achieve high accuracy while relying on superficial visual cues, using the Fashion MNIST dataset.
+          </p>
+
+          <a href="https://medium.com/@thequiickbrownfox/pretty-pictures-lazy-models-detecting-shortcut-learning-in-cnn-b10d9ad417b2" target="_blank" rel="noopener noreferrer">
+            Read article →
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-block">
+      <div class="section-head">
+        <h2>Skills</h2>
+        <p class="section-note">
+          Tools I tend to return to.
+        </p>
+      </div>
+
+      <div class="skills">
+        <span class="skill">Python</span>
+        <span class="skill">Scikit-learn</span>
+        <span class="skill">TensorFlow</span>
+        <span class="skill">PyTorch</span>
+        <span class="skill">Hugging Face</span>
+        <span class="skill">FAISS</span>
+        <span class="skill">NLP</span>
+        <span class="skill">QGIS</span>
+        <span class="skill">Geospatial</span>
+        <span class="skill">Data Visualisation</span>
+        <span class="skill">Research Methods</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-block">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p class="section-note">
+          The non-mysterious part.
+        </p>
+      </div>
+
+      <div class="contact">
+        <div class="contact-card">
+          <strong>Location</strong>
+          Cambridge, UK
+        </div>
+
+        <div class="contact-card">
+          <strong>Email</strong>
+          <a href="mailto:ashliv2001@gmail.com">ashliv2001@gmail.com</a>
+        </div>
+
+        <div class="contact-card">
+          <strong>LinkedIn</strong>
+          <a href="https://www.linkedin.com/in/ashlivarghese/" target="_blank" rel="noopener noreferrer">ashlivarghese ↗</a>
+        </div>
+
+        <div class="contact-card">
+          <strong>Data Journalism</strong>
+          <a href="https://www.business-standard.com/author/ashli-varghese" target="_blank" rel="noopener noreferrer">Business Standard ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <span>Built with GitHub Pages.</span>
+    <span>Data Sensemaker stays.</span>
+  </div>
 
 </div>
-
-</div>
-
-</section>
-
-
-
-
-<section class="section">
-
-<div class="section-block">
-
-<div class="section-head">
-
-<h2>Skills</h2>
-
-<p class="section-note">
-Tools I tend to return to.
-</p>
-
-</div>
-
-<div class="skills">
-
-<span class="skill">Python</span>
-<span class="skill">Scikit-learn</span>
-<span class="skill">TensorFlow</span>
-<span class="skill">PyTorch</span>
-<span class="skill">Hugging Face</span>
-<span class="skill">FAISS</span>
-<span class="skill">NLP</span>
-<span class="skill">QGIS</span>
-<span class="skill">Geospatial</span>
-<span class="skill">Data Visualisation</span>
-<span class="skill">Research Methods</span>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-<section class="section">
-
-<div class="section-block">
-
-<div class="section-head">
-
-<h2>Contact</h2>
-
-<p class="section-note">
-The non-mysterious part.
-</p>
-
-</div>
-
-
-<div class="contact">
-
-<div class="contact-card">
-
-<strong>
-Location
-</strong>
-
-Cambridge, UK
-
-</div>
-
-
-
-<div class="contact-card">
-
-<strong>
-Email
-</strong>
-
-<a href="mailto:ashliv2001@gmail.com">
-
-ashliv2001@gmail.com
-
-</a>
-
-</div>
-
-
-
-<div class="contact-card">
-
-<strong>
-LinkedIn
-</strong>
-
-<a href="https://www.linkedin.com/in/ashlivarghese/">
-
-ashlivarghese ↗
-
-</a>
-
-</div>
-
-
-
-<div class="contact-card">
-
-<strong>
-Data Journalism
-</strong>
-
-<a href="https://www.business-standard.com/author/ashli-varghese">
-
-Business Standard ↗
-
-</a>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<div class="footer">
-
-<span>
-Built with GitHub Pages.
-</span>
-
-<span>
-Data Sensemaker stays.
-</span>
-
-</div>
-
-
-
-</div>
-
 </body>
-
 </html>
