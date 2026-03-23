@@ -1,41 +1,101 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Ashli Varghese | Data Sensemaker </title>
+<title>Ashli Varghese | Data Sensemaker</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 body {
-font-family: Arial, sans-serif;
-margin: 40px auto;
-max-width: 900px;
-line-height: 1.6;
+font-family: 'Inter', sans-serif;
+margin: 50px auto;
+max-width: 920px;
+line-height: 1.75;
 color: #222;
 padding: 0 20px;
+background-color: #fafafa;
 }
 
 h1 {
-font-size: 32px;
-margin-bottom: 5px;
+font-size: 42px;
+margin-bottom: 6px;
+letter-spacing: -0.02em;
+}
+
+.tagline {
+font-size: 18px;
+color: #555;
+margin-bottom: 36px;
+font-weight: 600;
 }
 
 h2 {
-margin-top: 40px;
-border-bottom: 1px solid #eee;
-padding-bottom: 5px;
+margin-top: 48px;
+margin-bottom: 18px;
+font-size: 24px;
+border-bottom: 1px solid #e8e8e8;
+padding-bottom: 8px;
+}
+
+p {
+font-size: 16px;
+margin-top: 0;
 }
 
 .project {
-margin-bottom: 25px;
+margin-bottom: 22px;
+background: #ffffff;
+padding: 22px 24px;
+border-radius: 14px;
+box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.project b {
+font-size: 18px;
+display: inline-block;
+margin-bottom: 8px;
+}
+
+.skills-line {
+color: #555;
+margin-top: 10px;
+margin-bottom: 10px;
+font-size: 15px;
 }
 
 a {
 color: #0a66c2;
 text-decoration: none;
+font-weight: 500;
 }
 
 a:hover {
 text-decoration: underline;
+}
+
+.about-box {
+background: #ffffff;
+padding: 24px;
+border-radius: 14px;
+box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.contact-box {
+background: #ffffff;
+padding: 22px 24px;
+border-radius: 14px;
+box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+margin-bottom: 40px;
+}
+
+.section-note {
+color: #666;
+margin-top: -6px;
+margin-bottom: 20px;
+font-size: 15px;
 }
 
 </style>
@@ -45,75 +105,75 @@ text-decoration: underline;
 <body>
 
 <h1>Ashli Varghese</h1>
-<p><b>Data Sensemaker</b></p>
+<p class="tagline">Data Sensemaker</p>
 
 <h2>About</h2>
 
+<div class="about-box">
 <p>
-Data Scientist with newsroom experience, specialising in large-scale dataset wrangling, NLP pipelines, and interpretable machine learning. 
+Data Scientist with newsroom experience, specialising in large-scale dataset wrangling, NLP pipelines, and interpretable machine learning.
 Experienced in collecting and structuring messy real-world datasets (including web-scraped and API-sourced data) and transforming them into interpretable insights. Skilled in building transparent ML pipelines, including retrieval-augmented architectures, and communicating results to editorial and non-technical audiences.
 </p>
+</div>
 
 <h2>Projects</h2>
+<p class="section-note">A few questions I’ve explored through data.</p>
 
 <div class="project">
 <b>Political Bias Detection in News Media</b><br>
 News articles rarely present information in neutral form — choices about emphasis, framing and language shape interpretation. In this project, I built a Retrieval-Augmented Generation pipeline analysing over 1,000 political news articles to examine how ideological perspectives influence narrative structure. The work involved combining semantic search (FAISS), transformer-based summarisation and structured dataset construction to explore how computational methods can assist in analysing political communication at scale.
-<br>
-Skills: Python, NLP, Hugging Face, FAISS
-<br>
-<a href="https://github.com/thequiickbrownfox/Political_Bias_Detection_RAG">Project link</a>
+<div class="skills-line">Skills: Python, NLP, Hugging Face, FAISS</div>
+<a href="https://github.com/thequiickbrownfox/Political_Bias_Detection_RAG" target="_blank" rel="noopener noreferrer">View project →</a>
 </div>
 
 <div class="project">
 <b>Which UK Towns are Ageing the Most?</b><br>
 Population change often happens gradually enough that its effects are easy to overlook. Using time-series demographic data from the Office for National Statistics, I analysed how age structure has evolved across more than 300 local authorities. The aim was to understand how generational shifts differ regionally and how demographic change may influence economic resilience, labour markets and public service demand over time.
-<br>
-Skills: Python, Pandas, GeoPandas, data visualisation
-<br>
-<a href="https://uk-ageing-local-towns-explorer.streamlit.app/">Project link</a>
+<div class="skills-line">Skills: Python, Pandas, GeoPandas, data visualisation</div>
+<a href="https://uk-ageing-local-towns-explorer.streamlit.app/" target="_blank" rel="noopener noreferrer">View project →</a>
 </div>
 
 <div class="project">
 <b>UK Cinema Access Mapping</b><br>
-Cambridge is a city of universities, laboratories and ideas, yet it has remarkably few cinemas. That small observation led me down an unexpected path: extracting cinema locations across the UK using OpenStreetMap data and mapping how cultural infrastructure is distributed across the country
-<br>
-Skills: QGIS, Python, geospatial analysis
-<br>
-<a href="https://uk-cinema-finder.streamlit.app/">Project link</a>
+Cambridge is a city of universities, laboratories and ideas, yet it has remarkably few cinemas. That small observation led me down an unexpected path: extracting cinema locations across the UK using OpenStreetMap data and mapping how cultural infrastructure is distributed across the country.
+<div class="skills-line">Skills: QGIS, Python, geospatial analysis</div>
+<a href="https://uk-cinema-finder.streamlit.app/" target="_blank" rel="noopener noreferrer">View project →</a>
 </div>
 
 <h2>Writing</h2>
+<p class="section-note">Writing that combines analysis, evidence and explanation.</p>
 
 <div class="project">
 <b>Business Standard Data Journalism</b><br>
-•	Ensured data accuracy and consistency across published analyses by cleaning, validating, and structuring political, economic, and financial datasets. Authored 100+ data-driven stories, transforming complex datasets into clear, decision-oriented insights.
-<br>
-<a href="https://www.business-standard.com/author/ashli-varghese">View articles</a>
+Ensured data accuracy and consistency across published analyses by cleaning, validating, and structuring political, economic, and financial datasets. Authored 100+ data-driven stories, transforming complex datasets into clear, decision-oriented insights.
+<br><br>
+<a href="https://www.business-standard.com/author/ashli-varghese" target="_blank" rel="noopener noreferrer">View articles →</a>
 </div>
 
 <div class="project">
 <b>Medium Article – Shortcut Learning in CNNs</b><br>
-When your CNN learns where a shoe is, rather than what a shoe is, it highlights an interesting habit in play- Shortcut Learning!
-In this article, I tested a Convolutional Neural Network (CNN) using the Fashion MNIST dataset to uncover how it learns. When the dataset was tweaked, the curious case of shortcut learning unfolded: despite high accuracy initially, the model relies on surface-level cues rather than fully recognising patterns. 
-
-<br>
-<a href="https://medium.com/@thequiickbrownfox/pretty-pictures-lazy-models-detecting-shortcut-learning-in-cnn-b10d9ad417b2">Read article</a>
+When your CNN learns where a shoe is, rather than what a shoe is, it reveals an interesting habit at play: shortcut learning. In this article, I tested a Convolutional Neural Network (CNN) using the Fashion MNIST dataset to explore how it learns. When the dataset was tweaked, the model’s reliance on surface-level cues became clearer despite initially high accuracy.
+<br><br>
+<a href="https://medium.com/@thequiickbrownfox/pretty-pictures-lazy-models-detecting-shortcut-learning-in-cnn-b10d9ad417b2" target="_blank" rel="noopener noreferrer">Read article →</a>
 </div>
 
 <h2>Skills</h2>
 
+<div class="about-box">
 <p>
-Python • Scikit learn • TensorFlow • PyTorch • Hugging Face • FAISS • NLP • Geospatial Analytics • Data Visualisation • QGIS • Research Methods
+Python • Scikit-learn • TensorFlow • PyTorch • Hugging Face • FAISS • NLP • Geospatial Analytics • Data Visualisation • QGIS • Research Methods
 </p>
+</div>
 
 <h2>Contact</h2>
 
+<div class="contact-box">
 <p>
 Cambridge, UK<br>
-Email: ashliv2001@gmail.com<br>
-<a href="https://www.linkedin.com/in/ashlivarghese/">Linkedin</a>
+Email: <a href="mailto:ashliv2001@gmail.com">ashliv2001@gmail.com</a><br>
+<a href="https://www.linkedin.com/in/ashlivarghese/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
 </p>
+</div>
 
 </body>
 </html>
