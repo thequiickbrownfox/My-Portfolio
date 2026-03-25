@@ -22,9 +22,7 @@
   --shadow:0 10px 30px rgba(35,24,14,0.08);
 }
 
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box;}
 
 body{
   margin:0;
@@ -235,17 +233,9 @@ h2{
   box-shadow:0 14px 30px rgba(35,24,14,0.1);
 }
 
-.large{
-  grid-column:span 7;
-}
-
-.small{
-  grid-column:span 5;
-}
-
-.full{
-  grid-column:1/-1;
-}
+.large{ grid-column:span 7; }
+.small{ grid-column:span 5; }
+.full{ grid-column:1/-1; }
 
 .card h3{
   margin:0 0 10px;
@@ -329,51 +319,9 @@ a{
 }
 
 @media(max-width:900px){
-  .hero{
-    grid-template-columns:1fr;
-  }
-
-  .hero-main{
-    min-height:320px;
-  }
-
-  .hero-photo{
-    width:42%;
-    object-position:center 25%;
-  }
-
-  .large,.small{
-    grid-column:1/-1;
-  }
-
-  .contact{
-    grid-template-columns:1fr;
-  }
-}
-
-@media(max-width:640px){
-  .container{
-    width:min(100% - 20px, 1120px);
-  }
-
-  .hero-main{
-    padding:24px;
-    min-height:300px;
-  }
-
-  .hero-photo{
-    width:46%;
-    opacity:0.20;
-  }
-
-  h1{
-    max-width:100%;
-  }
-
-  .section-head{
-    flex-direction:column;
-    align-items:flex-start;
-  }
+  .hero{grid-template-columns:1fr;}
+  .large,.small{grid-column:1/-1;}
+  .contact{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -381,255 +329,156 @@ a{
 <body>
 <div class="container">
 
-  <section class="hero">
+<section class="hero">
+<div class="hero-main">
+<div class="hero-overlay"></div>
 
-    <div class="hero-main">
-      <div class="hero-overlay"></div>
+<div class="eyebrow">
+<span class="dot"></span> Portfolio
+</div>
 
-      <div class="eyebrow">
-        <span class="dot"></span> Portfolio
-      </div>
+<h1>
+Ashli Varghese,<br>
+<span class="serif">Data Sensemaker</span>
+</h1>
 
-      <h1>
-        Ashli Varghese,<br>
-        <span class="serif">Data Sensemaker</span>
-      </h1>
+<p class="hero-copy">
+From political philosophy to machine learning — still asking the same questions, just with better tools.
+</p>
 
-      <p class="hero-copy">
-        From political philosophy to machine learning — still asking the same questions, just with better tools.
-      </p>
+<img src="profile.jpeg" class="hero-photo">
+</div>
 
-      <img src="profile.jpeg" class="hero-photo" alt="Ashli Varghese">
-    </div>
+<aside class="hero-side">
+<div>
+<div class="mini-label">Currently curious about</div>
+<p>
+Data science, journalism, public-interest questions, and how evidence can clarify complex debates.
+</p>
+</div>
 
-    <aside class="hero-side">
-      <div>
-        <div class="mini-label">Currently curious about</div>
-        <p>
-          Data science, journalism, public-interest questions, and how evidence can clarify complex debates.
-        </p>
-      </div>
+<div class="stats">
+<div class="stat">
+<span class="stat-number">100+</span>
+<span class="stat-label">data-driven stories</span>
+</div>
 
-      <div class="stats">
-        <div class="stat">
-          <span class="stat-number">100+</span>
-          <span class="stat-label">data-driven stories authored</span>
-        </div>
+<div class="stat">
+<span class="stat-number">300+</span>
+<span class="stat-label">UK authorities analysed</span>
+</div>
 
-        <div class="stat">
-          <span class="stat-number">300+</span>
-          <span class="stat-label">UK local authorities analysed</span>
-        </div>
+<div class="stat">
+<span class="stat-number">1,000+</span>
+<span class="stat-label">articles studied</span>
+</div>
 
-        <div class="stat">
-          <span class="stat-number">1,000+</span>
-          <span class="stat-label">news articles studied in RAG project</span>
-        </div>
+<div class="stat">
+<span class="stat-number">UK</span>
+<span class="stat-label">public datasets</span>
+</div>
+</div>
+</aside>
+</section>
 
-        <div class="stat">
-          <span class="stat-number">UK</span>
-          <span class="stat-label">public datasets, maps, live apps</span>
-        </div>
-      </div>
-    </aside>
+<section class="section">
+<div class="section-block">
 
-  </section>
+<div class="section-head">
+<h2>Selected Work</h2>
+<p class="section-note">
+A few things I’ve tried to understand with data.
+</p>
+</div>
 
-  <section class="section">
-    <div class="section-block">
-      <div class="section-head">
-        <h2>About</h2>
-        <p class="section-note">
-          A slightly more human summary than a CV bullet list.
-        </p>
-      </div>
+<div class="cards">
 
-      <div class="cards">
-        <div class="card full">
-          <div class="accent-line"></div>
-          <p>
-            A data journalist by chance, a data scientist by choice. My route into machine learning has been somewhat unconventional, but in hindsight, everything aligns. I began by studying political philosophy, where my dissertation explored questions around digital realities and the metaverse. That curiosity later took a more empirical form through data journalism, working with political and economic datasets, and eventually led me to formal training in data science.
-          </p>
-          <p>
-            Across different fields, the common thread has remained the same: I enjoy making sense of complex data and uncovering patterns that are not immediately obvious.
-          </p>
-          <p>
-            Outside datasets, I spend time watching films, occasionally overanalysing thriller series, and currently attempting to convince my ukulele that I know what I’m doing.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+<article class="card large">
+<h3>Political Bias Detection in News Media</h3>
 
-  <section class="section">
-    <div class="section-block">
-      <div class="section-head">
-        <h2>Selected Work</h2>
-        <p class="section-note">
-          A few things I’ve tried to understand with data.
-        </p>
-      </div>
+<div class="meta">
+<span class="pill">Python</span>
+<span class="pill">NLP</span>
+<span class="pill">Transformers</span>
+<span class="pill">FAISS</span>
+</div>
 
-      <div class="cards">
-        <article class="card large">
-          <h3>Political Bias Detection in News Media</h3>
+<p>
+Built a Retrieval-Augmented Generation pipeline analysing 1,000+ political news articles.
+</p>
 
-          <div class="meta">
-            <span class="pill">Python</span>
-            <span class="pill">NLP</span>
-            <span class="pill">Transformers</span>
-            <span class="pill">FAISS</span>
-          </div>
+<a href="https://github.com/thequiickbrownfox/Political_Bias_Detection_RAG" target="_blank">
+View project →
+</a>
+</article>
 
-          <p>
-            Built a Retrieval-Augmented Generation pipeline analysing 1,000+ political news articles to explore how ideological perspectives influence narrative framing.
-          </p>
+<article class="card small">
+<h3>Which UK Towns are Ageing the Most?</h3>
 
-          <a href="https://github.com/thequiickbrownfox/Political_Bias_Detection_RAG" target="_blank" rel="noopener noreferrer">
-            View project →
-          </a>
-        </article>
+<div class="meta">
+<span class="pill">Pandas</span>
+<span class="pill">GeoPandas</span>
+<span class="pill">ONS</span>
+<span class="pill">Streamlit</span>
+</div>
 
-        <article class="card small">
-          <h3>Which UK Towns are Ageing the Most?</h3>
+<p>
+Analysed demographic change across 300+ UK local authorities.
+</p>
 
-          <div class="meta">
-            <span class="pill">Pandas</span>
-            <span class="pill">GeoPandas</span>
-            <span class="pill">ONS</span>
-            <span class="pill">Streamlit</span>
-          </div>
+<a href="https://uk-ageing-local-towns-explorer.streamlit.app/" target="_blank">
+View project →
+</a>
+</article>
 
-          <p>
-            Using ONS time-series data, I analysed demographic change across 300+ local authorities to explore regional generational shifts.
-          </p>
+<article class="card full">
+<h3>FTSE 100 Diversity Index</h3>
 
-          <a href="https://uk-ageing-local-towns-explorer.streamlit.app/" target="_blank" rel="noopener noreferrer">
-            View project →
-          </a>
-        </article>
+<div class="meta">
+<span class="pill">Streamlit</span>
+<span class="pill">Pandas</span>
+<span class="pill">Plotly</span>
+<span class="pill">Index Design</span>
+</div>
 
-        <article class="card full">
-          <h3>UK Cinema Access Mapping</h3>
+<p>
+Interactive diversity ranking of FTSE 100 firms using transparent scoring logic, min-max normalisation, and explainable indicator weighting.
+</p>
 
-          <div class="meta">
-            <span class="pill">QGIS</span>
-            <span class="pill">Python</span>
-            <span class="pill">Geospatial</span>
-            <span class="pill">OpenStreetMap</span>
-          </div>
+<a href="https://diversity-index-for-ftse-100.streamlit.app/" target="_blank">
+Live app →
+</a>
 
-          <p>
-            Mapped cinema accessibility across the UK using OpenStreetMap data to explore distribution of cultural infrastructure.
-          </p>
+&nbsp;·&nbsp;
 
-          <a href="https://uk-cinema-finder.streamlit.app/" target="_blank" rel="noopener noreferrer">
-            View project →
-          </a>
-        </article>
-      </div>
-    </div>
-  </section>
+<a href="https://github.com/thequiickbrownfox/Diversity-Index-for-FTSE-100" target="_blank">
+Code →
+</a>
 
-  <section class="section">
-    <div class="section-block">
-      <div class="section-head">
-        <h2>Writing</h2>
-        <p class="section-note">
-          Where analysis meets explanation.
-        </p>
-      </div>
+</article>
 
-      <div class="cards">
-        <article class="card small">
-          <h3>Business Standard Data Journalism</h3>
+<article class="card full">
+<h3>UK Cinema Access Mapping</h3>
 
-          <p>
-            Cleaned, validated and structured political, economic and financial datasets to support accurate reporting. Authored 100+ research-driven data stories.
-          </p>
+<div class="meta">
+<span class="pill">QGIS</span>
+<span class="pill">Python</span>
+<span class="pill">Geospatial</span>
+</div>
 
-          <a href="https://www.business-standard.com/author/ashli-varghese" target="_blank" rel="noopener noreferrer">
-            View articles →
-          </a>
-        </article>
+<p>
+Mapped cinema accessibility using OpenStreetMap data.
+</p>
 
-        <article class="card large">
-          <h3>Shortcut Learning in CNNs</h3>
+<a href="https://uk-cinema-finder.streamlit.app/" target="_blank">
+View project →
+</a>
 
-          <p>
-            Explored how neural networks can achieve high accuracy while relying on superficial visual cues, using the Fashion MNIST dataset.
-          </p>
+</article>
 
-          <a href="https://medium.com/@thequiickbrownfox/pretty-pictures-lazy-models-detecting-shortcut-learning-in-cnn-b10d9ad417b2" target="_blank" rel="noopener noreferrer">
-            Read article →
-          </a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-block">
-      <div class="section-head">
-        <h2>Skills</h2>
-        <p class="section-note">
-          Tools I tend to return to.
-        </p>
-      </div>
-
-      <div class="skills">
-        <span class="skill">Python</span>
-        <span class="skill">Scikit-learn</span>
-        <span class="skill">TensorFlow</span>
-        <span class="skill">PyTorch</span>
-        <span class="skill">Hugging Face</span>
-        <span class="skill">FAISS</span>
-        <span class="skill">NLP</span>
-        <span class="skill">QGIS</span>
-        <span class="skill">Geospatial</span>
-        <span class="skill">Data Visualisation</span>
-        <span class="skill">Research Methods</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-block">
-      <div class="section-head">
-        <h2>Contact</h2>
-        <p class="section-note">
-          The non-mysterious part.
-        </p>
-      </div>
-
-      <div class="contact">
-        <div class="contact-card">
-          <strong>Location</strong>
-          Cambridge, UK
-        </div>
-
-        <div class="contact-card">
-          <strong>Email</strong>
-          <a href="mailto:ashliv2001@gmail.com">ashliv2001@gmail.com</a>
-        </div>
-
-        <div class="contact-card">
-          <strong>LinkedIn</strong>
-          <a href="https://www.linkedin.com/in/ashlivarghese/" target="_blank" rel="noopener noreferrer">ashlivarghese ↗</a>
-        </div>
-
-        <div class="contact-card">
-          <strong>Data Journalism</strong>
-          <a href="https://www.business-standard.com/author/ashli-varghese" target="_blank" rel="noopener noreferrer">Business Standard ↗</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="footer">
-    <span>Built with GitHub Pages.</span>
-    <span>Data Sensemaker stays.</span>
-  </div>
+</div>
+</div>
+</section>
 
 </div>
 </body>
